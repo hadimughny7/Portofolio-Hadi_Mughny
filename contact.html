@@ -28,18 +28,26 @@
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="cursorFollower"></div>
 
-    <!-- ===== BACK NAVIGATION ===== -->
-    <nav class="contact-nav" id="contactNav">
-        <a href="index.html" class="contact-nav__back" aria-label="Go back">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                stroke-linecap="round" stroke-linejoin="round">
-                <line x1="19" y1="12" x2="5" y2="12"></line>
-                <polyline points="12 19 5 12 12 5"></polyline>
-            </svg>
-            <span>Back</span>
-        </a>
-        <span class="contact-nav__label">Let's Collaborate</span>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="index.html" class="navbar__logo">Hadi Mughny</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+
+    <!-- Full-screen Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Navigation menu">
+        <nav class="nav-overlay__list">
+            <a href="index.html#home" class="nav-overlay__link" data-nav-link>Home</a>
+            <a href="index.html#projects" class="nav-overlay__link" data-nav-link>Projects</a>
+            <a href="index.html#experience" class="nav-overlay__link" data-nav-link>Experience</a>
+            <a href="index.html#skills" class="nav-overlay__link" data-nav-link>Skills</a>
+            <a href="contact.html" class="nav-overlay__link" data-nav-link>Contact</a>
+        </nav>
+    </div>
 
     <!-- ===== MAIN CONTENT ===== -->
     <main class="contact-page">
@@ -276,14 +284,53 @@
         });
 
         // ============================================
+        // MAGNETIC HOVER EFFECT FOR NAVBAR
+        // ============================================
+        const magneticEls = document.querySelectorAll('.navbar__toggle');
+        magneticEls.forEach(el => {
+            el.addEventListener('mousemove', (e) => {
+                const rect = el.getBoundingClientRect();
+                const x = e.clientX - rect.left - rect.width / 2;
+                const y = e.clientY - rect.top - rect.height / 2;
+                el.style.transform = `translate(${x * 0.3}px, ${y * 0.3}px)`;
+            });
+            el.addEventListener('mouseleave', () => {
+                el.style.transform = 'translate(0, 0)';
+            });
+        });
+
+        // ============================================
+        // NAVIGATION TOGGLE
+        // ============================================
+        const navToggle = document.getElementById('navToggle');
+        const navOverlay = document.getElementById('navOverlay');
+        const navLinks = document.querySelectorAll('[data-nav-link]');
+
+        navToggle.addEventListener('click', () => {
+            const isActive = navToggle.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navOverlay.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ============================================
         // NAVBAR SCROLL EFFECT
         // ============================================
-        const contactNav = document.getElementById('contactNav');
+        const navbar = document.getElementById('navbar');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 30) {
-                contactNav.classList.add('scrolled');
+                navbar.classList.add('scrolled');
             } else {
-                contactNav.classList.remove('scrolled');
+                navbar.classList.remove('scrolled');
             }
         }, { passive: true });
     </script>
