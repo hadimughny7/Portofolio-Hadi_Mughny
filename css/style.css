@@ -5,15 +5,15 @@
 
 /* --- CSS Custom Properties --- */
 :root {
-  --bg-cream: #F5F2EB;
-  --bg-dark: #111111;
-  --bg-dark-card: #1A1A1A;
-  --text-primary: #111111;
-  --text-muted: #6B6B6B;
-  --text-cream: #F5F2EB;
-  --accent-gold: #C8A96E;
-  --border-light: rgba(0, 0, 0, 0.12);
-  --border-dark: rgba(255, 255, 255, 0.15);
+  --bg-cream: #ABD2FA;
+  --bg-dark: #091540;
+  --bg-dark-card: #1B2CC1;
+  --text-primary: #091540;
+  --text-muted: #1B2CC1;
+  --text-cream: #ABD2FA;
+  --accent-gold: #1B2CC1;
+  --border-light: rgba(9, 21, 64, 0.15);
+  --border-dark: rgba(171, 210, 250, 0.15);
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
@@ -155,7 +155,7 @@ ul, ol {
 }
 
 .navbar.scrolled {
-  background: rgba(245, 242, 235, 0.9);
+  background: rgba(171, 210, 250, 0.9);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   padding: 12px 40px;
@@ -458,6 +458,8 @@ ul, ol {
    ======================================== */
 .projects {
   padding: 100px 0;
+  background-color: var(--bg-dark);
+  color: var(--text-cream);
 }
 
 .projects__header {
@@ -476,7 +478,7 @@ ul, ol {
   gap: 48px;
   align-items: center;
   padding: 48px 0;
-  border-bottom: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-dark);
   opacity: 0;
   transform: translateY(40px);
   transition: opacity 0.7s ease-out, transform 0.7s ease-out;
@@ -488,21 +490,50 @@ ul, ol {
 }
 
 .project-card:first-of-type {
-  border-top: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-dark);
 }
 
 .project-card__image-wrapper {
+  position: relative;
   border-radius: var(--radius-lg);
-  overflow: hidden;
-  background: #e8e4dd;
+  background: linear-gradient(135deg, rgba(118, 146, 255, 0.1) 0%, rgba(27, 44, 193, 0.1) 100%);
+  border: 1px solid rgba(118, 146, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
   aspect-ratio: 16 / 10;
 }
 
 .project-card__image-wrapper img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  width: 90%;
+  height: 90%;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.25);
   transition: transform var(--transition-slow);
+}
+
+/* Fading Slider for Cafe POS */
+.kitkop-slider img {
+  opacity: 0;
+  animation: fadeSlider 25s infinite ease-in-out;
+}
+
+.kitkop-slider img:nth-child(1) { animation-delay: 0s; }
+.kitkop-slider img:nth-child(2) { animation-delay: 5s; }
+.kitkop-slider img:nth-child(3) { animation-delay: 10s; }
+.kitkop-slider img:nth-child(4) { animation-delay: 15s; }
+.kitkop-slider img:nth-child(5) { animation-delay: 20s; }
+
+@keyframes fadeSlider {
+  0% { opacity: 0; transform: translateY(15px); }
+  4% { opacity: 1; transform: translateY(0); }
+  16% { opacity: 1; transform: translateY(0); }
+  20% { opacity: 0; transform: translateY(-15px); }
+  100% { opacity: 0; transform: translateY(-15px); }
 }
 
 .project-card:hover .project-card__image-wrapper img {
@@ -512,8 +543,8 @@ ul, ol {
 .project-card__number {
   font-family: var(--font-display);
   font-size: clamp(1.5rem, 3vw, 2.5rem);
-  color: var(--accent-gold);
-  opacity: 0.5;
+  color: #7692FF;
+  opacity: 0.8;
   margin-bottom: 8px;
 }
 
@@ -527,7 +558,7 @@ ul, ol {
 
 .project-card__desc {
   font-size: 0.95rem;
-  color: var(--text-muted);
+  color: rgba(171, 210, 250, 0.85);
   line-height: 1.7;
   margin-bottom: 20px;
 }
@@ -537,6 +568,16 @@ ul, ol {
   flex-wrap: wrap;
   gap: 8px;
   margin-bottom: 24px;
+}
+
+.project-card__tech .pill {
+  border-color: var(--border-dark);
+  color: var(--text-cream);
+}
+
+.project-card__tech .pill:hover {
+  background: var(--text-cream);
+  color: var(--bg-dark);
 }
 
 .pill {
@@ -574,7 +615,7 @@ ul, ol {
   gap: 8px;
   font-weight: 600;
   font-size: 0.9rem;
-  color: var(--text-primary);
+  color: var(--text-cream);
   transition: gap var(--transition-fast), color var(--transition-fast);
 }
 
@@ -714,7 +755,7 @@ ul, ol {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(135deg, rgba(200, 169, 110, 0.08) 0%, transparent 60%);
+  background: linear-gradient(135deg, rgba(27, 44, 193, 0.08) 0%, transparent 60%);
   pointer-events: none;
 }
 
@@ -864,6 +905,7 @@ ul, ol {
   margin-top: 40px;
   pointer-events: none;
   user-select: none;
+  text-align: left;
 }
 
 /* ========================================
@@ -903,7 +945,261 @@ ul, ol {
 }
 
 /* ========================================
-   SCROLL ANIMATIONS
+   PRELOADER
+   ======================================== */
+.preloader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--bg-dark);
+  z-index: 9999;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+.preloader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.preloader__text {
+  font-family: var(--font-display);
+  font-size: clamp(2.5rem, 8vw, 6rem);
+  text-transform: uppercase;
+  color: var(--text-cream);
+  letter-spacing: 0.05em;
+  overflow: hidden;
+  line-height: 1;
+}
+
+.preloader__text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(100%);
+  animation: preloaderChar 0.5s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.preloader__line {
+  width: 60px;
+  height: 2px;
+  background: var(--accent-gold);
+  margin-top: 24px;
+  transform: scaleX(0);
+  animation: preloaderLine 0.8s 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+@keyframes preloaderChar {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes preloaderLine {
+  to {
+    transform: scaleX(1);
+  }
+}
+
+/* ========================================
+   CUSTOM CURSOR
+   ======================================== */
+.cursor {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background: var(--text-primary);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 10000;
+  transform: translate(-50%, -50%);
+  transition: width 0.3s ease, height 0.3s ease, background 0.3s ease, opacity 0.3s ease;
+  mix-blend-mode: difference;
+}
+
+.cursor-follower {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 40px;
+  height: 40px;
+  border: 1.5px solid rgba(27, 44, 193, 0.5);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  transform: translate(-50%, -50%);
+  transition: width 0.4s ease, height 0.4s ease, border-color 0.3s ease, opacity 0.3s ease;
+}
+
+.cursor.hover {
+  width: 50px;
+  height: 50px;
+  background: rgba(27, 44, 193, 0.15);
+  mix-blend-mode: normal;
+}
+
+.cursor-follower.hover {
+  width: 60px;
+  height: 60px;
+  border-color: var(--accent-gold);
+}
+
+/* Hide custom cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .cursor,
+  .cursor-follower {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   SCROLL PROGRESS BAR
+   ======================================== */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-gold), #7692FF);
+  z-index: 10001;
+  width: 0%;
+  transition: none;
+  border-radius: 0 2px 2px 0;
+  box-shadow: 0 0 8px rgba(27, 44, 193, 0.4);
+}
+
+/* ========================================
+   AMBIENT BACKGROUND GLOW
+   ======================================== */
+.hero::after {
+  content: '';
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 500px;
+  height: 500px;
+  background: radial-gradient(circle, rgba(27, 44, 193, 0.08) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: -1;
+  animation: glowPulse 6s ease-in-out infinite alternate;
+}
+
+.contact::before {
+  content: '';
+  position: absolute;
+  top: -80px;
+  left: -80px;
+  width: 450px;
+  height: 450px;
+  background: radial-gradient(circle, rgba(27, 44, 193, 0.06) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  animation: glowPulse 8s ease-in-out infinite alternate;
+}
+
+@keyframes glowPulse {
+  0% { opacity: 0.5; transform: scale(1); }
+  100% { opacity: 1; transform: scale(1.15); }
+}
+
+/* ========================================
+   SCROLL-SCRUB TEXT HIGHLIGHT
+   ======================================== */
+.char-highlight span {
+  opacity: 0.15;
+  transition: opacity 0.05s ease;
+  display: inline;
+}
+
+.char-highlight span.lit {
+  opacity: 1;
+}
+
+/* ========================================
+   ENHANCED SLIDE ANIMATIONS
+   ======================================== */
+@keyframes slideFromLeft {
+  from { opacity: 0; transform: translateX(-60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slideFromRight {
+  from { opacity: 0; transform: translateX(60px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+.project-card {
+  opacity: 0;
+  transform: translateX(-50px);
+  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-card:nth-child(even) {
+  transform: translateX(50px);
+}
+
+.project-card.visible {
+  opacity: 1;
+  transform: translateX(0) !important;
+}
+
+/* Enhanced experience stagger */
+.experience__entry {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.experience__entry.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   WATERMARK CHARACTER ANIMATION
+   ======================================== */
+.contact__watermark span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.contact__watermark.visible span {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ========================================
+   MAGNETIC BUTTON ENHANCEMENT
+   ======================================== */
+.magnetic-wrap {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+}
+
+/* ========================================
+   SKILL CARD HOVER TILT
+   ======================================== */
+.skill-card {
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out, box-shadow 0.4s ease;
+}
+
+.skill-card:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  transform: translateY(-4px) !important;
+}
+
+/* ========================================
+   SCROLL ANIMATIONS (KEYFRAMES)
    ======================================== */
 @keyframes slideUp {
   from {
