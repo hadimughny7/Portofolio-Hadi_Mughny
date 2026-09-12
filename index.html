@@ -4,377 +4,508 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description"
+        content="Hadi Mughny — Fullstack Web Developer & UI/UX Designer. Information Systems student at Universitas Komputer Indonesia.">
+    <meta name="author" content="Hadi Mughny">
     <link rel="icon" href="img/tittle.png">
-    <title>Hadi Mughny Porto</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-    <link rel="stylesheet" href="css/style.css">
+    <title>Hadi Mughny — Portfolio</title>
+
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&family=Playpen+Sans:wght@100..800&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Fjalla+One&family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&display=swap"
         rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
 
-    <!-- ini navbar hadi ganteng bosskuu ( tandain biar ga susah nyari nyaa bwangg ) -->
-
-    <nav class="navbar navbar-expand-lg">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Hadi Mughny</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-center" id="navbarNav">
-                <ul class="navbar-nav ms-auto gap-1">
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#About">About</a>
-                    </li>
-                    <li class="nav-item"></li>
-                    <a class="nav-link active" aria-current="page" href="#portofolio">Portofolio</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#Contact">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
+        <a href="#home" class="navbar__logo">Hadi Mughny</a>
+        <button class="navbar__toggle" id="navToggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
 
-    <!-- ini navbar bagian akhirr boskuuu -->
-
-
-    <!-- ini gelombangg bosskuu -->
-
-    <div style="position: relative; overflow: hidden;">
-        <svg id="wave"
-            style="transform:rotate(180deg); transition: 0.3s; position: absolute; top: 0; left: 0; width: 100%; height: auto;"
-            viewBox="0 0 1440 320" version="1.1" xmlns="http://www.w3.org/2000/svg">
-            <defs>
-                <linearGradient id="sw-gradient-0" x1="0" x2="0" y1="1" y2="0">
-                    <stop stop-color="rgba(227, 253, 253, 1)" offset="0%"></stop>
-                    <stop stop-color="rgba(227, 253, 253, 1)" offset="100%"></stop>
-                </linearGradient>
-            </defs>
-            <path fill="url(#sw-gradient-0)"
-                d="M0,224L26.7,229.3C53.3,235,107,245,160,234.7C213.3,224,267,192,320,176C373.3,160,427,160,480,133.3C533.3,107,587,53,640,37.3C693.3,21,747,43,800,69.3C853.3,96,907,128,960,128C1013.3,128,1067,96,1120,112C1173.3,128,1227,192,1280,224C1333.3,256,1387,256,1440,256C1493.3,256,1547,256,1600,256C1653.3,256,1707,256,1760,218.7C1813.3,181,1867,107,1920,85.3C1973.3,64,2027,96,2080,128C2133.3,160,2187,192,2240,176C2293.3,160,2347,96,2400,58.7C2453.3,21,2507,11,2560,10.7C2613.3,11,2667,21,2720,37.3C2773.3,53,2827,75,2880,85.3C2933.3,96,2987,96,3040,117.3C3093.3,139,3147,181,3200,197.3C3253.3,213,3307,203,3360,165.3C3413.3,128,3467,64,3520,42.7C3573.3,21,3627,43,3680,64C3733.3,85,3787,107,3813,117.3L3840,128L3840,320L3813.3,320C3786.7,320,3733,320,3680,320C3626.7,320,3573,320,3520,320C3466.7,320,3413,320,3360,320C3306.7,320,3253,320,3200,320C3146.7,320,3093,320,3040,320C2986.7,320,2933,320,2880,320C2826.7,320,2773,320,2720,320C2666.7,320,2613,320,2560,320C2506.7,320,2453,320,2400,320C2346.7,320,2293,320,2240,320C2186.7,320,2133,320,2080,320C2026.7,320,1973,320,1920,320C1866.7,320,1813,320,1760,320C1706.7,320,1653,320,1600,320C1546.7,320,1493,320,1440,320C1386.7,320,1333,320,1280,320C1226.7,320,1173,320,1120,320C1066.7,320,1013,320,960,320C906.7,320,853,320,800,320C746.7,320,693,320,640,320C586.7,320,533,320,480,320C426.7,320,373,320,320,320C266.7,320,213,320,160,320C106.7,320,53,320,27,320L0,320Z">
-            </path>
-        </svg>
-
-        <!-- ini akhir dari gelombangg boskuuuu -->
-
-        <!-- home sayaa -->
-
-        <div class="jumbotron jumbotron-fluid" id="Home"
-            style="position: relative; z-index: 1; display: flex; justify-content: center; align-items: center; flex-direction: column;">
-            <div class="container"
-                style="margin-top: 100px; display: flex; flex-direction: column; align-items: center;">
-                <img src="img/profileaku.png" alt=""
-                    style="width: 200px; height: 200px; border-radius: 50%; object-fit: cover;">
-                <h1 class="display-7" style="margin-top: 20px;">Welcome to my Portofolio</h1>
-                <p class="lead" style="text-align: center; font-size: medium;">I am Hadi Mughny, Student at Universitas
-                    Komputer Indonesia
-                    | Fullstack Web Developer</p>
-            </div>
-            <div class="text-center" style="margin-top: 20px;">
-                <a href="https://drive.google.com/file/d/1ynYyNcHFwKgiPw-q6OqFJGANI-9Ly8Pa/view?usp=sharing"
-                    target="_blank">
-                    <button type="submit" class="btn btn-cv">View My CV</button>
-                </a>
-                <a href="https://api.whatsapp.com/send?phone=6285775005702" target="_blank">
-                    <button type="submit" class="btn btn-contact">Contact Me</button>
-                </a>
-            </div>
-        </div>
-
+    <!-- Full-screen Nav Overlay -->
+    <div class="nav-overlay" id="navOverlay" role="dialog" aria-label="Navigation menu">
+        <nav class="nav-overlay__list">
+            <a href="#home" class="nav-overlay__link" data-nav-link>Home</a>
+            <a href="#projects" class="nav-overlay__link" data-nav-link>Projects</a>
+            <a href="#experience" class="nav-overlay__link" data-nav-link>Experience</a>
+            <a href="#skills" class="nav-overlay__link" data-nav-link>Skills</a>
+            <a href="#contact" class="nav-overlay__link" data-nav-link>Contact</a>
+        </nav>
     </div>
 
-    <!-- beresan home nya -->
-
-    <!-- ini tentang saya  -->
-
-    <section class="about-section" style="background-color: #ffffff; padding: 60px 0;" id="About">
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero section" id="home">
         <div class="container">
-            <div class="row align-items-stretch" style="display: flex; flex-wrap: wrap;">
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <img src="img/about.gif" alt="About Me Image" class="img-fluid rounded"
-                        style="object-fit: cover; width: 100%; height: 100%;">
-                </div>
-                <div class="col-md-6 d-flex align-items-stretch">
-                    <div class=""
-                        style="background-color: #E3FDFD; border-radius: 20px; padding: 20px; box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); height: 100%; width: 100%;">
-                        <div>
-                            <h1 style="color: #71C9CE; font-weight: bold;">Hadi Mughny</h1>
-                            <h2 style="color: #000000; font-weight: bold;">About Me</h2>
-                            <p style="color: #000000; line-height: 1.6; font-size: large;">
-                                Information Systems student at the Indonesian Computer University with a great interest
-                                in technology, in particular
-                                full-stack web development, including front-end and back-end. I am hardworking, honest
-                                and always enthusiastic
-                                learn new skills and knowledge. With a friendly, polite and helpful personality, I am
-                                Able to work independently or in a team in a dynamic environment. Listening and
-                                problem-solving skills
-                                A good one allows me to provide the right solution in various situations.
-                            </p>
-                        </div>
-                    </div>
-                </div>
+            <h1 class="hero__title">
+                <span class="hero__title-line">
+                    <span class="hero__title-text">Hadi</span>
+                </span>
+                <span class="hero__title-line">
+                    <span class="hero__title-text">Mughny</span>
+                </span>
+            </h1>
+            <p class="hero__subtitle">Fullstack Web Developer</p>
+            <p class="hero__description">
+                Information Systems student at Universitas Komputer Indonesia with a passion for building
+                modern, responsive, and interactive web experiences — from front-end interfaces to back-end
+                architectures.
+            </p>
+            <div class="hero__cta-group">
+                <a href="#contact" class="btn btn--outline">
+                    <span>Get In Touch</span>
+                    <span class="btn__arrow">→</span>
+                </a>
+                <a href="https://drive.google.com/file/d/1ynYyNcHFwKgiPw-q6OqFJGANI-9Ly8Pa/view?usp=sharing"
+                    target="_blank" class="btn btn--dark">
+                    <span>View My CV</span>
+                    <span class="btn__arrow">→</span>
+                </a>
             </div>
         </div>
     </section>
 
-    <!-- itulahh kawan tentang sayaa -->
-
-
-    <!-- portfolio hadiii dimulaii anjayy -->
-
-    <div class="container" style="margin-bottom: 80px;" id="portofolio">
-        <h1 style="color: #000000; font-weight: bold;">My Projects</h1>
-        <p style="color: grey; font-size: medium;">This contains some of my projects.</p>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://www.figma.com/design/gsmNaFgVSa6SgVAiEcTgVR/TradlyPlatform---Headless-Commerce-API-Kit-(Community)?node-id=0-1&t=BpyMjTaATG9vwoId-1"
-                        class="lightbox">
-                        <img src="img/porto1.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">UI & UX Project</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    This is about making UI & UX design for gaming tools and equipment store, i use figma to make this
-                    project, and i really enjoy making it.</p>
+    <!-- ===== MARQUEE BANNER ===== -->
+    <div class="marquee" aria-hidden="true">
+        <div class="marquee__track">
+            <div class="marquee__content">
+                <span class="marquee__item">Interactive Experiences</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Smooth Animations</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Clean UI</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Responsive Design</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Full Stack Development</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">UI/UX Design</span>
+                <span class="marquee__separator">→</span>
             </div>
-
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://hadimughny7.github.io/webisengkati/" class="lightbox">
-                        <img src="img/porto2.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">FrontEnd Project</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    This project contains a frontend website, this website is about a store that sells the latest and
-                    complete gaming equipment and tools, this website is to make it easier for buyers to buy their
-                    gaming equipment.</p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://www.figma.com/design/aP810uWMGDVjDplWP1RIZC/Project-Work?node-id=0-1&t=wW6qItXt2uNwKJBi-1"
-                        class="lightbox">
-                        <img src="img/porto3.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">UI & UX Project</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    I once made UI & UX for a school operational assistance management system website when I was still
-                    in vocational school, that is an example of the image.</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://www.figma.com/design/lZlpJHHd5YsAYJT86AaTDd/Untitled?node-id=0-1&t=U2HujXYycEgOammm-1"
-                        class="lightbox">
-                        <img src="img/porto4.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Poster Design</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    I once made a poster design using figma, the theme of this poster is about how we can protect nature
-                    and how to recycle waste.</p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://www.figma.com/design/IJRSFiElBBwuyMz871M8Sm/Untitled?node-id=0-1&t=ddcCzUAL9QJTeMVc-1"
-                        class="lightbox">
-                        <img src="img/porto5.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">UI & UX Project</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    I have created UI & UX designs using Figma, UI & UX designs for online shops that sell goods,
-                    clothes, electronics, etc., the design is very simple but quite useful.</p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://www.figma.com/design/2xpua6Wj5oqMIYRR2ZG5JA/Untitled?node-id=1-2&t=hoMbb1BDXPM6vyQX-1"
-                        class="lightbox">
-                        <img src="img/porto6.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">UI & UX Project</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    I made a UI & UX design about selling tour tickets to Nusa Penida, there are features for buying
-                    tickets, about it, distance and time as well as the prices listed..</p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://sweetdessert.glitch.me/" class="lightbox">
-                        <img src="img/porto 10.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Website Bucketlist</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    Making Website Bucketlist website using json, python with flask framework, mongodb, jquery, ajax,
-                    and deployed to glitch
-                </p>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://mugnaifavmovie.glitch.me/" class="lightbox">
-                        <img src="img/porto 8.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Website Favorite Movie</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    Making Favorite Movie website using python with flask framework, mongodb, jquery, ajax, and deployed
-                    to glitch</p>
-            </div>
-
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://qubbafoundation.org/" class="lightbox">
-                        <img src="img/porto 11.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Website Qubba Foundation</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    Making Website Qubba Foundation Using Wordpress for Foundation owned by PT Syaamil Qur'an
-                </p>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://peppermint-unexpected-antimony.glitch.me/" class="lightbox">
-                        <img src="img/porto 9.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Website Sparta Vocabulary Notebook</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    Making Sparta Vocabulary Notebook website using json, python with flask framework, mongodb, jquery,
-                    ajax, and deployed to glitch</p>
-            </div>
-            <div class="col-md-6 col-lg-4 mt-3">
-                <div class="card border-1 transform-on-hover">
-                    <a href="https://sweetdessert.glitch.me/" class="lightbox">
-                        <img src="img/porto 7.png" class="card-img-top" alt="Deskripsi Gambar">
-                    </a>
-                    <div class="top-left-text"
-                        style="position: absolute; top: 10px; left: 10px; background-color: #E3FDFD; padding: 5px 10px; border-radius: 10px;">
-                        <h4 style="margin: 0; font-size: 16px; color: grey;">Ecommerce Website</h4>
-                    </div>
-                </div>
-                <p style="color: grey; font-size: medium; margin-top: 15px;">
-                    Create an Ecommerce website using html, css, bootstrap, ajax, mongodb, python with the flask
-                    framework and deploy using glitch
-                </p>
+            <div class="marquee__content">
+                <span class="marquee__item">Interactive Experiences</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Smooth Animations</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Clean UI</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Responsive Design</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">Full Stack Development</span>
+                <span class="marquee__separator">→</span>
+                <span class="marquee__item">UI/UX Design</span>
+                <span class="marquee__separator">→</span>
             </div>
         </div>
     </div>
 
-    <!-- portfolio nya hadii siuuuuu -->
+    <!-- ===== SELECTED PROJECTS ===== -->
+    <section class="projects section" id="projects">
+        <div class="container">
+            <div class="projects__header reveal">
+                <h2 class="projects__title">Selected <span class="text-gold">Projects</span></h2>
+            </div>
 
-    <!-- ini kontaknya abangkuuu -->
+            <!-- Project 1 -->
+            <article class="project-card">
+                <div class="project-card__image-wrapper">
+                    <img src="img/porto 11.png" alt="Website Qubba Foundation">
+                </div>
+                <div class="project-card__info">
+                    <div class="project-card__number">01.</div>
+                    <h3 class="project-card__title">Qubba Foundation Website</h3>
+                    <p class="project-card__desc">
+                        Built the Qubba Foundation and Wisata Qur'an websites using WordPress with custom CSS and JavaScript for a foundation owned by PT Syaamil Qur'an.
+                    </p>
+                    <div class="project-card__tech">
+                        <span class="pill">WordPress</span>
+                        <span class="pill">CSS</span>
+                        <span class="pill">JavaScript</span>
+                    </div>
+                    <a href="https://qubbafoundation.org/" target="_blank" class="project-card__link">
+                        View Project <span class="project-card__link-arrow">→</span>
+                    </a>
+                </div>
+            </article>
 
-    <section class="bg-light" style="background-color: #ffffff; padding: 60px 0; margin-top: 80px;" id="Contact">
-        <div class="container" style="margin-bottom: 0;">
-            <h2 class="text-center mb-5" style="color: #3a3a3a;">Contact Me</h2>
-            <div class="row justify-content-center">
-                <div class="col-md-6">
-                    <div class="p-4"
-                        style="background-color: white; border-radius: 10px; box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); margin-bottom: 0;">
-                        <form>
-                            <div class="form-group">
-                                <label for="name"
-                                    style="color: #3a3a3a; display: inline-block; width: 100%;">Name</label>
-                                <input type="text" class="form-control" id="name"
-                                    style="border: 1px solid #71C9CE; border-radius: 5px; width: 100%;">
-                            </div>
-                            <div class="form-group">
-                                <label for="email"
-                                    style="color: #3a3a3a; display: inline-block; width: 100%;">Email</label>
-                                <input type="email" class="form-control" id="email"
-                                    style="border: 1px solid #71C9CE; border-radius: 5px; width: 100%;">
-                            </div>
-                            <div class="form-group">
-                                <label for="message"
-                                    style="color: #3a3a3a; display: inline-block; width: 100%;">Message</label>
-                                <textarea class="form-control" id="message" rows="3"
-                                    style="border: 1px solid #71C9CE; border-radius: 5px; width: 100%;"></textarea>
-                            </div>
-                            <div class="text-center" style="margin-top: 20px;">
-                                <button type="submit" class="btn btn-primary"
-                                    style="background-color: #71C9CE; border-color: #71C9CE;">Submit</button>
-                            </div>
-                        </form>
+            <!-- Project 2 -->
+            <article class="project-card">
+                <div class="project-card__image-wrapper">
+                    <img src="img/porto 7.png" alt="Sweet Dessert E-Commerce">
+                </div>
+                <div class="project-card__info">
+                    <div class="project-card__number">02.</div>
+                    <h3 class="project-card__title">Sweet Dessert E-Commerce</h3>
+                    <p class="project-card__desc">
+                        A web-based food ordering application supporting online dessert ordering with integration between front-end and back-end. Developed during the LearningX Fullstack Web Development program.
+                    </p>
+                    <div class="project-card__tech">
+                        <span class="pill">JavaScript</span>
+                        <span class="pill">Bootstrap</span>
+                        <span class="pill">Python Flask</span>
+                        <span class="pill">MongoDB</span>
+                        <span class="pill">REST API</span>
+                    </div>
+                    <a href="https://sweetdessert.glitch.me/" target="_blank" class="project-card__link">
+                        View Project <span class="project-card__link-arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+
+            <!-- Project 3 -->
+            <article class="project-card">
+                <div class="project-card__image-wrapper">
+                    <img src="img/kitkop.png" alt="Kitkop Web App">
+                </div>
+                <div class="project-card__info">
+                    <div class="project-card__number">03.</div>
+                    <h3 class="project-card__title">Kitkop — Cafe POS Web App</h3>
+                    <p class="project-card__desc">
+                        A fullstack Point of Sale and food ordering web application for cafes. Features include menu management, real-time order tracking with Socket.IO, QR code table ordering, and an admin dashboard with sales reports.
+                    </p>
+                    <div class="project-card__tech">
+                        <span class="pill">React.js</span>
+                        <span class="pill">Node.js</span>
+                        <span class="pill">Express</span>
+                        <span class="pill">MySQL</span>
+                        <span class="pill">Socket.IO</span>
+                    </div>
+                    <a href="https://github.com/hadimughny7/kitkop-web-app" target="_blank"
+                        class="project-card__link">
+                        View on GitHub <span class="project-card__link-arrow">→</span>
+                    </a>
+                </div>
+            </article>
+
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="experience section" id="experience">
+        <div class="container">
+            <p class="experience__label reveal">/ Experience</p>
+
+            <div class="experience__entry">
+                <div class="experience__number">01</div>
+                <div>
+                    <h3 class="experience__role">Frontend Web Developer</h3>
+                    <p class="experience__company">Inndivo.com - Bandung, Indonesia</p>
+                    <p class="experience__period">Apr 2025 — Nov 2025</p>
+                    <p class="experience__desc">
+                        Developed a company profile website and an internal online training platform (Inndivo University) using React.js, TypeScript, and Tailwind CSS, with interactive features, responsive design, and API integration.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience__entry">
+                <div class="experience__number">02</div>
+                <div>
+                    <h3 class="experience__role">Web Developer Internship</h3>
+                    <p class="experience__company">Syaamil Group - Bandung, Indonesia</p>
+                    <p class="experience__period">Jan 2025 — Apr 2025</p>
+                    <p class="experience__desc">
+                        Built the Qubba Foundation and Wisata Qur'an websites using WordPress with custom CSS and JavaScript for a foundation owned by PT Syaamil Qur'an.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience__entry">
+                <div class="experience__number">03</div>
+                <div>
+                    <h3 class="experience__role">Independent Study (Capstone Project)</h3>
+                    <p class="experience__company">LearningX (MSIB Batch 7)</p>
+                    <p class="experience__period">Sep 2024 — Dec 2024</p>
+                    <p class="experience__desc">
+                        Developed a web-based food ordering application (Sweet Dessert e-commerce) using HTML, CSS, JavaScript, Bootstrap, Python Flask, and MongoDB.
+                    </p>
+                </div>
+            </div>
+
+            <div class="experience__entry">
+                <div class="experience__number">04</div>
+                <div>
+                    <h3 class="experience__role">Junior Web Developer Internship</h3>
+                    <p class="experience__company">CV IDS Kejar ID - Bogor, Indonesia</p>
+                    <p class="experience__period">Mar 2021 — Jun 2021</p>
+                    <p class="experience__desc">
+                        Built the website interface and developed the required features using the PHP programming language and the Laravel framework.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="skills section" id="skills">
+        <div class="container">
+            <p class="skills__label reveal">/ Skills</p>
+
+            <div class="skills__grid">
+                <!-- Skill 1: Frontend -->
+                <div class="skill-card">
+                    <div class="skill-card__header">
+                        <span class="skill-card__number">/ 01</span>
+                        <span class="skill-card__badge">SKILL</span>
+                    </div>
+                    <h3 class="skill-card__title">Frontend</h3>
+                    <p class="skill-card__subtitle">Building modern, responsive and interactive user interfaces.</p>
+                    <div class="skill-card__pills">
+                        <span class="pill pill--dark">React.js</span>
+                        <span class="pill pill--dark">TypeScript</span>
+                        <span class="pill pill--dark">JavaScript</span>
+                        <span class="pill pill--dark">Tailwind CSS</span>
+                        <span class="pill pill--dark">Bootstrap</span>
+                        <span class="pill pill--dark">AJAX</span>
+                    </div>
+                </div>
+
+                <!-- Skill 2: Backend -->
+                <div class="skill-card">
+                    <div class="skill-card__header">
+                        <span class="skill-card__number">/ 02</span>
+                        <span class="skill-card__badge">SKILL</span>
+                    </div>
+                    <h3 class="skill-card__title">Backend & DB</h3>
+                    <p class="skill-card__subtitle">Creating robust server-side logic and database architectures.</p>
+                    <div class="skill-card__pills">
+                        <span class="pill pill--dark">Node.js</span>
+                        <span class="pill pill--dark">Express.js</span>
+                        <span class="pill pill--dark">Python (Flask)</span>
+                        <span class="pill pill--dark">Laravel</span>
+                        <span class="pill pill--dark">MySQL</span>
+                        <span class="pill pill--dark">MongoDB</span>
+                        <span class="pill pill--dark">REST API</span>
+                    </div>
+                </div>
+
+                <!-- Skill 3: Tools -->
+                <div class="skill-card">
+                    <div class="skill-card__header">
+                        <span class="skill-card__number">/ 03</span>
+                        <span class="skill-card__badge">SKILL</span>
+                    </div>
+                    <h3 class="skill-card__title">Tools</h3>
+                    <p class="skill-card__subtitle">Leveraging modern tools for efficient development workflows.</p>
+                    <div class="skill-card__pills">
+                        <span class="pill pill--dark">Git/GitHub</span>
+                        <span class="pill pill--dark">Vite.js</span>
+                        <span class="pill pill--dark">WordPress</span>
+                    </div>
+                </div>
+
+                <!-- Skill 4: Soft Skills -->
+                <div class="skill-card">
+                    <div class="skill-card__header">
+                        <span class="skill-card__number">/ 04</span>
+                        <span class="skill-card__badge">SKILL</span>
+                    </div>
+                    <h3 class="skill-card__title">Soft Skills</h3>
+                    <p class="skill-card__subtitle">Core interpersonal skills for effective teamwork and problem solving.</p>
+                    <div class="skill-card__pills">
+                        <span class="pill pill--dark">Teamwork</span>
+                        <span class="pill pill--dark">Communication</span>
+                        <span class="pill pill--dark">Problem-solving</span>
+                        <span class="pill pill--dark">Critical Thinking</span>
+                        <span class="pill pill--dark">Leadership</span>
+                        <span class="pill pill--dark">Fast Learner</span>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- beresan kontaknyaa abbangkuuu -->
+    <!-- ===== PHILOSOPHY QUOTE ===== -->
+    <section class="philosophy section-sm">
+        <div class="container">
+            <blockquote class="philosophy__quote">
+                "I'm not just here to make things <span class="text-gold">work</span> — I want to create
+                experiences that people <span class="text-gold">remember.</span>"
+            </blockquote>
+            <a href="#contact" class="btn btn--dark" style="margin: 0 auto; display: inline-flex;">
+                <span>More About Me</span>
+                <span class="btn__arrow">→</span>
+            </a>
+        </div>
+    </section>
 
-    <!-- ini adalah footer saya -->
-
-    <footer class="site-footer"
-        style="margin-top: 0; padding: 20px 0; background-color: #E3FDFD; display: flex; justify-content: center; align-items: center; height: 100px;">
-        <div class="container" style="width: 100%; text-align: center;">
-            <p class="mb-0" style="font-size: 15px;">
-                Copyright &copy; 2024
-                <a class="footer-link" href="#Home">Portofolio</a> <span>|</span>
-                <a class="footer-link" rel="sponsored" href="https://www.instagram.com/hadimghny/" target="_blank">
-                    Hadi
-                    Mughny</a>
+    <!-- ===== CONTACT / GET IN TOUCH ===== -->
+    <section class="contact section" id="contact">
+        <div class="container">
+            <h2 class="contact__title reveal">
+                GET IN<br><span class="text-gold">Touch</span>
+            </h2>
+            <p class="contact__text reveal">
+                Have a project in mind, want to collaborate, or just want to say hello?
+                I'd love to hear from you. Let's build something amazing together.
             </p>
+
+            <div class="contact__cta-row reveal">
+                <a href="https://api.whatsapp.com/send?phone=6285775005702" target="_blank" class="btn btn--dark">
+                    <span>Let's Collaborate</span>
+                    <span class="btn__arrow">→</span>
+                </a>
+
+                <div class="contact__socials">
+                    <a href="https://www.instagram.com/hadimghny/" target="_blank" class="contact__social-link"
+                        aria-label="Instagram">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/hadimughny7" target="_blank" class="contact__social-link"
+                        aria-label="GitHub">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="https://api.whatsapp.com/send?phone=6285775005702" target="_blank"
+                        class="contact__social-link" aria-label="WhatsApp">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                            </path>
+                        </svg>
+                    </a>
+                    <a href="mailto:hadimughny@email.com" class="contact__social-link" aria-label="Email">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z">
+                            </path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="contact__watermark" aria-hidden="true">
+                HADI<br>MUGHNY
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer__inner">
+                <p class="footer__copy">© 2024 Hadi Mughny. All rights reserved.</p>
+                <div class="footer__links">
+                    <a href="https://www.instagram.com/hadimghny/" target="_blank" class="footer__link">Instagram</a>
+                    <a href="https://github.com/hadimughny7" target="_blank" class="footer__link">GitHub</a>
+                    <a href="#home" class="footer__link">Back to top ↑</a>
+                </div>
+            </div>
         </div>
     </footer>
 
-    <!-- akhir dari footer hadi gantengg -->
+    <!-- ===== JAVASCRIPT ===== -->
+    <script>
+        // ---- Navigation Toggle ----
+        const navToggle = document.getElementById('navToggle');
+        const navOverlay = document.getElementById('navOverlay');
+        const navLinks = document.querySelectorAll('[data-nav-link]');
+
+        navToggle.addEventListener('click', () => {
+            const isActive = navToggle.classList.toggle('active');
+            navOverlay.classList.toggle('active');
+            navToggle.setAttribute('aria-expanded', isActive);
+            document.body.style.overflow = isActive ? 'hidden' : '';
+        });
+
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                navToggle.classList.remove('active');
+                navOverlay.classList.remove('active');
+                navToggle.setAttribute('aria-expanded', 'false');
+                document.body.style.overflow = '';
+            });
+        });
+
+        // ---- Navbar Scroll Effect ----
+        const navbar = document.getElementById('navbar');
+        let lastScroll = 0;
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            if (currentScroll > 60) {
+                navbar.classList.add('scrolled');
+            } else {
+                navbar.classList.remove('scrolled');
+            }
+            lastScroll = currentScroll;
+        }, { passive: true });
+
+        // ---- Scroll Reveal (IntersectionObserver) ----
+        const revealElements = document.querySelectorAll('.reveal, .project-card, .skill-card, .experience__entry, .philosophy__quote');
+
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    revealObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: '0px 0px -40px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
+
+        // ---- Staggered Skill Cards ----
+        const skillCards = document.querySelectorAll('.skill-card');
+        const skillObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry, index) => {
+                if (entry.isIntersecting) {
+                    setTimeout(() => {
+                        entry.target.classList.add('visible');
+                    }, index * 150);
+                    skillObserver.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        skillCards.forEach(card => skillObserver.observe(card));
+
+        // ---- Active nav link highlight ----
+        const sections = document.querySelectorAll('section[id]');
+
+        window.addEventListener('scroll', () => {
+            const scrollY = window.scrollY + 200;
+
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+                const sectionId = section.getAttribute('id');
+
+                if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+                    navLinks.forEach(link => {
+                        link.style.opacity = link.getAttribute('href') === `#${sectionId}` ? '1' : '0.5';
+                    });
+                }
+            });
+        }, { passive: true });
+    </script>
 
 </body>
 
