@@ -1266,12 +1266,23 @@ ul, ol {
   }
 
   .project-card {
-    grid-template-columns: 1fr;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
+  }
+
+  .project-card__info {
+    order: 1;
+  }
+
+  .project-card__image-wrapper {
+    order: 2;
+    width: 100%;
   }
 
   .project-card:nth-child(even) {
     direction: ltr;
+    flex-direction: column;
   }
 
   .experience__entry {
@@ -1400,10 +1411,10 @@ ul, ol {
   }
 
   .project-card {
-    padding: 28px 0;
-    gap: 20px;
     display: flex;
     flex-direction: column;
+    padding: 28px 0;
+    gap: 20px;
   }
 
   .project-card__info {
@@ -1412,16 +1423,15 @@ ul, ol {
 
   .project-card__image-wrapper {
     order: 2;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    border-radius: var(--radius-md);
+    overflow: visible;
   }
 
   .project-card:nth-child(even) {
     direction: ltr;
     flex-direction: column;
-  }
-
-  .project-card__image-wrapper {
-    aspect-ratio: 16 / 10;
-    border-radius: var(--radius-md);
   }
 
   .project-card__image-wrapper img {
