@@ -1338,7 +1338,7 @@ ul, ol {
   }
 
   .hero {
-    padding: 100px 0 50px;
+    padding: 130px 0 50px;
     min-height: auto;
   }
 
@@ -1402,6 +1402,21 @@ ul, ol {
   .project-card {
     padding: 28px 0;
     gap: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .project-card__info {
+    order: 1;
+  }
+
+  .project-card__image-wrapper {
+    order: 2;
+  }
+
+  .project-card:nth-child(even) {
+    direction: ltr;
+    flex-direction: column;
   }
 
   .project-card__image-wrapper {
@@ -1602,7 +1617,7 @@ ul, ol {
   }
 
   .hero {
-    padding: 90px 0 40px;
+    padding: 120px 0 40px;
   }
 
   .hero__title {
